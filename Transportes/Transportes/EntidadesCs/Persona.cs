@@ -6,7 +6,7 @@ namespace EntidadesCs
 {
    public abstract class Persona
    {
-      // private static List<> movimientos;
+      // private static List<IMovimiento> movimientos;
 
       private string dni;
       private string nombre;
@@ -29,7 +29,7 @@ namespace EntidadesCs
          set => nombre = (value.Length > 0 && value.Length <= 30) ? value : throw new ArgumentException(" el nombre no cumple con los requerimientos del campo");
       }
 
-      // public static ?? GetMovimientos() ?? de que ?? 
+      // public static List<IMovimiento> GetMovimientos()
 
       public override string ToString()
       {

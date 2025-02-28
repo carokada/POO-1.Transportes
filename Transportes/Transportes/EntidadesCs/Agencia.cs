@@ -8,7 +8,7 @@ namespace EntidadesCs
    {
       private static List<Factura> facturas = new List<Factura>(); // asoc multiple facturas
 
-      internal static void AddFactura(Factura factura) // internal por abstraccion por asoc ??
+      internal static void AddFactura(Factura factura) // internal por abstraccion por asoc: OK
       {
          if (factura == null)
             throw new ArgumentException(" la factura no puede ser nula.");
@@ -49,8 +49,8 @@ namespace EntidadesCs
          return pasajerosPorDestinoYFecha;
       }
 
-
-      // la lista no deberia ser de pasaje o facturas ? interfaz en el medio IMovimiento ?? o hacer 2 listas
+      // queda pendiente: deberia agregar una interfaz que una factura y pasajes como movimientos
+      // la lista deberia ser de pasaje y facturas (tipo IMovimiento)
       public static List<Persona> GetMovimientosByPersona(Persona persona)
       {
          List<Persona> movimientosPorPersona = new List<Persona>();

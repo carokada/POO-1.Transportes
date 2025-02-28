@@ -142,8 +142,9 @@ namespace DemoCs
          MostrarPasajerosPorDestinoYFecha(ciudad3, new DateTime(2025, 3, 15));
 
          // deberia devolver Persona.GetMovimientos() ?? porque sino devuelve una lista con el nombre de la persona que se pasa
-         Console.WriteLine("\n movimientos por persona");
-         MostrarMovimientosPorPersona(pasajero2);
+         // queda pendiente: IMovimiento permitiria hacer una lista que admita tanto persona como cliente
+         //Console.WriteLine("\n movimientos por persona");
+         //MostrarMovimientosPorPersona(pasajero2);
 
          //Console.WriteLine("");
          //Console.WriteLine();

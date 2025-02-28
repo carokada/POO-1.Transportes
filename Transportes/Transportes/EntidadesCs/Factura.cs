@@ -18,7 +18,7 @@ namespace EntidadesCs
          Fecha = fecha;
          Cliente = cliente;
 
-         Agencia.AddFactura(this); // para agregar a la lista de la clase de utilidad
+         Agencia.AddFactura(this); // para agregar a la lista facturas de la clase de utilidad
       }
 
       public DateTime Fecha
@@ -33,7 +33,7 @@ namespace EntidadesCs
          set
          {
             cliente = value ?? throw new ArgumentException(" el cliente no puede ser nulo.");
-            Cliente.AddFactura(this); // asoc multiple cliente
+            Cliente.AddFactura(this); // asoc multiple cliente (contraparte internal)
          }
       }
 
@@ -54,7 +54,7 @@ namespace EntidadesCs
          if (pasajes.Contains(pasaje))
             throw new ArgumentException(" el pasaje ya ha sido agregado al registro.");
          pasajes.Add(pasaje);
-         // agregar a getMovimientos Persona
+         // agregar a getMovimientos Persona (IMovimiento)
       }
 
       public List<Pasaje> GetPasajes()
