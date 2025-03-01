@@ -8,7 +8,7 @@ namespace EntidadesCs
    {
       private static List<Factura> facturas = new List<Factura>(); // asoc multiple facturas
 
-      internal static void AddFactura(Factura factura) // internal por abstraccion por asoc: OK
+      internal static void AddFactura(Factura factura) // internal por abstraccion por asoc
       {
          if (factura == null)
             throw new ArgumentException(" la factura no puede ser nula.");
@@ -49,8 +49,8 @@ namespace EntidadesCs
          return pasajerosPorDestinoYFecha;
       }
 
-      // queda pendiente: deberia agregar una interfaz que una factura y pasajes como movimientos
-      // la lista deberia ser de pasaje y facturas (tipo IMovimiento)
+      // queda pendiente: deberia agregar una interfaz que unifique factura y pasajes como movimientos
+      // la lista deberia ser de pasajes y facturas (tipo IMovimiento)
       public static List<Persona> GetMovimientosByPersona(Persona persona)
       {
          List<Persona> movimientosPorPersona = new List<Persona>();
@@ -58,12 +58,12 @@ namespace EntidadesCs
          foreach (var factura in facturas)
          {
             if (factura.Cliente.Dni == persona.Dni)
-               movimientosPorPersona.Add(factura.Cliente); //ver: deberia agregarse la factura a una lista
+               movimientosPorPersona.Add(factura.Cliente); //ver: deberia agregarse la factura a la lista
             
             foreach (var pasaje in factura.GetPasajes())
             {
                if (pasaje.Pasajero.Dni == persona.Dni)
-                  movimientosPorPersona.Add(pasaje.Pasajero); //ver: deberia agregarse el pasaje a una lista
+                  movimientosPorPersona.Add(pasaje.Pasajero); //ver: deberia agregarse el pasaje a la lista
             }
          }
          return movimientosPorPersona;

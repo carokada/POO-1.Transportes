@@ -37,7 +37,7 @@ namespace EntidadesCs
          }
       }
 
-      public decimal CalcularMontoTotal() // ESTA BIEN
+      public decimal CalcularMontoTotal()
       {
          decimal total = 0;
          foreach (var pasaje in pasajes)

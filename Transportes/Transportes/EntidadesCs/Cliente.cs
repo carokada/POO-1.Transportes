@@ -6,7 +6,7 @@ namespace EntidadesCs
 {
    public class Cliente : Persona
    {
-      private List<Factura> facturas;
+      private List<Factura> facturas; // asoc multiple 1 cliente muchas facturas
 
       public Cliente(string dni, string nombre) : base(dni, nombre)
       {

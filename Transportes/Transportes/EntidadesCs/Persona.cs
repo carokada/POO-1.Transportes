@@ -6,7 +6,7 @@ namespace EntidadesCs
 {
    public abstract class Persona
    {
-      // private static List<IMovimiento> movimientos;
+      // private static List<IMovimiento> movimientos =  new List<IMovimientos>();
 
       private string dni;
       private string nombre;

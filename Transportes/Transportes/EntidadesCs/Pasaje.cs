@@ -35,7 +35,7 @@ namespace EntidadesCs
             pasajero = value ?? throw new ArgumentException(" el pasajero no puede ser nulo.");
             // set completo con el addPasaje. le corresponde la responsabilidad del atributo pasajero. se pone la referencia en la propiedad de la asociacion. si el pasaje se borra deberia haber un metodo que elimine el pasaje de la lista del pasajero.
             pasajero.AddPasaje(this); // asoc multiple pasajero contraparte internal
-            // agregar a getMovimientos Persona ??
+            // agregar a getMovimientos Persona
          }
       }
 
